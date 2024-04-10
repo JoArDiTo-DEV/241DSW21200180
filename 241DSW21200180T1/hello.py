@@ -1,4 +1,4 @@
-#COMMIT 2a
+#COMMIT 2b
 
 from flask import Flask
 app = Flask(__name__)
@@ -8,4 +8,10 @@ app = Flask(__name__)
 def index():
     return '<h1>Hello World!</h1>'
 
-#EL SIGUIENTE COMMIT ES EL 2b
+
+@app.route('/user/<name>')
+def user(name):
+    return '<h1>Hello, {}!</h1>'.format(name)
+
+
+#EL SIGUIENTE COMMIT ES EL 3a
