@@ -1,5 +1,5 @@
-#COMMIT 3b
-#Para este caso, tenemos que importar la libería flask_bootstra con el comando pip
+#COMMIT 3c
+#Para este caso, tenemos que importar la libería flask_bootstra con el comando
 
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
@@ -7,6 +7,16 @@ from flask_bootstrap import Bootstrap
 app = Flask(__name__)
 
 bootstrap = Bootstrap(app)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    return render_template('500.html'), 500
 
 
 @app.route('/')
@@ -22,4 +32,4 @@ def user(name):
 if __name__ == '__main__':
     app.run(debug=True)
 
-#EL SIGUIENTE COMMIT ES EL 3c
+#EL SIGUIENTE COMMIT ES EL 3d
