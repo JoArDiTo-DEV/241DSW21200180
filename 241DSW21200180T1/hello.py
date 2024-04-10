@@ -1,5 +1,4 @@
-#COMMIT 3c
-#Para este caso, tenemos que importar la libería flask_bootstra con el comando
+#COMMIT 3d
 
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
@@ -32,4 +31,4 @@ def user(name):
 if __name__ == '__main__':
     app.run(debug=True)
 
-#EL SIGUIENTE COMMIT ES EL 3d
+#EL SIGUIENTE COMMIT ES EL 3e
